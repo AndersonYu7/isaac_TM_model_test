@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<robot name="epick_v2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find epick_v2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find epick_v2_description)/urdf/epick_v2.trans" />
+<xacro:include filename="$(find epick_v2_description)/urdf/epick_v2.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-1.2686666502570803e-05 0.0506402827734829 1.333057992524368e-07" rpy="0 0 0"/>
+    <mass value="2.9525411794982928"/>
+    <inertia ixx="0.004109" iyy="0.002006" izz="0.003325" ixy="2e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/home/iclab/IsaacSim-ros_workspaces/tm_humble_ws/src/epick_v2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="/home/iclab/IsaacSim-ros_workspaces/tm_humble_ws/src/epick_v2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+</robot>
